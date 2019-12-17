@@ -6,7 +6,7 @@
 #    By: trbonnes <trbonnes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/16 09:15:11 by trbonnes          #+#    #+#              #
-#    Updated: 2019/12/17 09:30:43 by trbonnes         ###   ########.fr        #
+#    Updated: 2019/12/17 10:33:42 by trbonnes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,3 +31,4 @@ service mysql start
 mysql -u root -e "CREATE DATABASE wordpress_db"
 mysql -u root -e "GRANT ALL PRIVILEGES ON wordpress_db.* TO 'user'@'localhost' IDENTIFIED BY 'lolilol' WITH GRANT OPTION"
 mysql -u root -e "FLUSH PRIVILEGES"
+mysql wordpress_db < /tmp/wordpress_db.sql
